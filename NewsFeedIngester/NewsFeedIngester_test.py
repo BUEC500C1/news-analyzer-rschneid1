@@ -27,8 +27,6 @@ def test_ingestMP4(file, fields):
 def test_ingestCustom(fields):
   fields = "author: Ryan Schneider"
   assert ingestCustom(fields) == 1
-
   
-# User enters data and desired fields and it creates object, or can use standard fields
 def test_createFields():
   assert createFields() == 1
