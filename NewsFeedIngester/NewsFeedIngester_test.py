@@ -21,7 +21,7 @@ def test_ingestJPEG():
 def test_ingestMP4(file, fields):
   file = "www.google.com/user/schneid/file.jpeg"
   fields = "author: Ryan Schneider"
-  assert ingestMP4file, fields) == 1
+  assert ingestMP4(file, fields) == 1
   
   
 def test_ingestCustom(fields):
