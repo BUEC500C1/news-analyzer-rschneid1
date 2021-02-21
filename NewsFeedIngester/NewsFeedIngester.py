@@ -1,7 +1,7 @@
 # Author: Ryan Schneider
 # functions for the news feed ingestor
 
-# SUPPORTED FILE TYPES: PDF, .doc, .docx, 
+# SUPPORTED FILE TYPES: PDF, .doc, .docx, .txt, JPEG, MP4, Custom
 import json
 
 def ingestPDF(file):
