@@ -1,38 +1,38 @@
 // User Collection contains User Documents
 // Example User Document in User Collection
 {
-  "userKey": "aBcJa2Jk1"
+  "userKey": "aBcJa2Jk1",
   "personal": {
-     "firstName": "Bob"
-     "lastName": "Smith"
-     "workID": "City Police Department"
-  }
+     "firstName": "Bob",
+     "lastName": "Smith",
+     "workID": "City Police Department",
+  },
   "associatedDocuments": {
-    "file_1": "Evidence1"
-    "file_2": "Evidence2"
+    "file_1": "Evidence1",
+    "file_2": "Evidence2",
   }
 }
 
 // File Collection contains File Documents
 // Example Documents in File Collection
 {
-  "fileID": "Evidence1"
-  "userKey": "aBcJa2Jk1"
+  "fileID": "Evidence1",
+  "userKey": "aBcJa2Jk1",
   "metadata": {
-     "authorFirst": "Adam"
-     "authorLast": "Smith"
-     "workID": "Local Newspaper"
-  }
+     "authorFirst": "Adam",
+     "authorLast": "Smith",
+     "workID": "Local Newspaper",
+  },
   "file" = "https://google.com/drive1"
 }
 
 {
-  "fileID": "Evidence2"
-  "userKey": "aBcJa2Jk1"
+  "fileID": "Evidence2",
+  "userKey": "aBcJa2Jk1",
   "metadata": {
-     "authorFirst": "Larry"
-     "authorLast": "Smith"
-     "workID": "Small Town Police Department"
+     "authorFirst": "Larry",
+     "authorLast": "Smith",
+     "workID": "Small Town Police Department",
   }
   "file" = "https://google.com/drive2"
 }
