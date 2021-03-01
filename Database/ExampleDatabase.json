@@ -23,7 +23,7 @@
      "authorLast": "Smith",
      "workID": "Local Newspaper",
   },
-  "file" = "https://google.com/drive1"
+  "file": "https://google.com/drive1"
 }
 
 {
@@ -34,5 +34,5 @@
      "authorLast": "Smith",
      "workID": "Small Town Police Department",
   }
-  "file" = "https://google.com/drive2"
+  "file": "https://google.com/drive2"
 }
