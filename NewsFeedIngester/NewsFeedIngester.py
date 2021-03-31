@@ -1,36 +1,19 @@
 # Author: Ryan Schneider
 # functions for the news feed ingestor
+# supported file types are provided by NLP, else we can just ingest any file
 
-# SUPPORTED FILE TYPES: PDF, .doc, .docx, .txt, JPEG, MP4, Custom
+# SUPPORTED FILE TYPES: PDF, .doc, .docx, .txt, JPEG, MP4 
 import json
+import requests *
+import os
 
-def ingestPDF(file):
-  # read PDF and detect metadata to fill out JSON object
-  jsonObj = file
-  return jsonObj
 
-def ingestMSDOC(file):
-  # read DOC/DOCX and detect metadata to fill out JSON object
-  jsonObj = file
-  return jsonObj
-
-def ingestTXT(file):
-  # read .txt and detect metadata to fill out JSON object
-  jsonObj = file
-  return jsonObj
-
-def ingestJPEG(file, fields):
-  # read JPEG and detect metadata to fill out JSON object
-  return 1
-
-def ingestMP4(file, fields):
-  # read MP4 and detect metadata to fill out JSON object
-  return 1
-# Provides fields for user to fill out their own metadata
-def ingestCustom(fields):
-  return 1
-# User enters data and desired fields and it creates object, or can use standard fields
-def createFields():
-  return 1
-  
+def ingest(key, file_path, filename):
+  files = {
+    'key': key,
+    'filename': filename,
+    'file': open(file_path, 'rb')
+  }
+  r = requests.post('https://localhost/document/upload', files=files)
+  return key
 
