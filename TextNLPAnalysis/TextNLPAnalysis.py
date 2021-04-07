@@ -1,11 +1,26 @@
 # Author: Ryan Schneider
-# functions for performing text nlp analysis
+# Natural Language Processing
+# Provide functions to interact with documents and text
 
-def analyze1():
-  return 1
+import PyPDF2 as pd
 
-def analyze2():
-  return 1
+# extracts text and outputs it to command line
+def extractText(file_path):
+    pdfFileObj = open(file_path, 'rb')
+    
+    pdfReader = pd.PdfFileReader(pdfFileObj)
 
-def analyze3():
-  return 1
+    numPages = pdfReader.numPages
+
+    pageObj = pdfReader.getPage(0)
+
+    output = pageObj.extractText()
+
+    for i in range(1,numPages):
+        pageObj = pdfReader.getPage(i)
+        temp = pageObj.extractText()
+        output = output + temp
+
+    pdfFileObj.close()
+
+    return output
