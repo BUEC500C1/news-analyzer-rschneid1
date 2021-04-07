@@ -4,16 +4,14 @@
 
 # SUPPORTED FILE TYPES: PDF, .doc, .docx, .txt, JPEG, MP4 
 import json
-import requests *
+import requests
 import os
 
 
-def ingest(key, file_path, filename):
-  files = {
-    'key': key,
-    'filename': filename,
-    'file': open(file_path, 'rb')
+def ingest(key, file_path):
+  files = {'file': open(file_path, 'rb') }
+  meta = {
+    'key': key
   }
-  r = requests.post('https://localhost/document/upload', files=files)
-  return key
-
+  r = requests.post('http://127.0.0.1:5000/document/upload', files=files, data=meta)
+  return r.content
