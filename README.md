@@ -18,3 +18,9 @@ Entity Based
 # User Stories:
 I, an investigator / journalist , want to be able to ingest a large variety of file types and convert them into uploadable files. These uploadable files consist of json files that list the metadata in an accessible format, and a location that the data will be stored.
 I, an investigator / journalist, want to be able to create a custom metadata entry, if my file type is not supported by the functions that automatically ingest metadata.
+
+
+
+### Video:
+# Link: https://drive.google.com/file/d/10XQmzOOvAFFrQaqCYfPn0syj4lP_fdKw/view?usp=sharing
+The video includes a demo where I go through the implemented functionality, and verify the results using the mongo terminal and application feedback.
