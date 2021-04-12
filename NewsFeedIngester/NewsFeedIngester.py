@@ -14,4 +14,5 @@ def ingest(key, file_path):
     'key': key
   }
   r = requests.post('http://127.0.0.1:5000/document/upload', files=files, data=meta)
-  return r.content
+  output = r.content
+  return output.decode("utf-8")
